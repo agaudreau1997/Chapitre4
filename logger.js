@@ -9,6 +9,10 @@ class Logger extends EventEmitter{
         let maDate = new Date().toLocaleString();
         this.emit("erreur", {id: uuid.v4(), temps: maDate, erreur: msg})
     }
+    info(msg){
+        let maDate = new Date().toLocaleString();
+        this.emit("information", {id: uuid.v4(), temps: maDate, information: msg})
+    }
 };
 
 module.exports = Logger;
